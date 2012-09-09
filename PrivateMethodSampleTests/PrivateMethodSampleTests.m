@@ -2,19 +2,21 @@
 //  PrivateMethodSampleTests.m
 //  PrivateMethodSampleTests
 //
-//  Created by Sasaki Takuro on 12/09/09.
 //  Copyright (c) 2012年 dkfj. All rights reserved.
 //
 
 #import "PrivateMethodSampleTests.h"
+#import "ExampleClassExtension.h"
 
 @implementation PrivateMethodSampleTests
 
 - (void)setUp
 {
+    NSLog(@"%@ setUp", self.name);
     [super setUp];
     
-    // Set-up code here.
+    exampleClass = [[ExampleClass alloc] init];
+    STAssertNotNil(exampleClass, @"Cannot create ExampleClass instance");
 }
 
 - (void)tearDown
@@ -24,9 +26,20 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testPublicMethod
 {
-    STFail(@"Unit tests are not implemented yet in PrivateMethodSampleTests");
+    STAssertFalse([exampleClass.exampleProperty isEqualToString:@"a"], @"not equal a");
+    [exampleClass publicMethod];
+    STAssertTrue([exampleClass.exampleProperty isEqualToString:@"a"], @"equal a");
+    STAssertFalse([exampleClass.exampleProperty isEqualToString:@"b"], @"not equal b");
+}
+
+- (void)testPrivateMethod
+{
+    STAssertFalse([exampleClass.exampleProperty isEqualToString:@"b"], @"not equal b");
+    [exampleClass privateMethod];
+    STAssertFalse([exampleClass.exampleProperty isEqualToString:@"a"], @"not equal a");
+    STAssertTrue([exampleClass.exampleProperty isEqualToString:@"b"], @"equal b");
 }
 
 @end

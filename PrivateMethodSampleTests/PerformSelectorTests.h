@@ -1,6 +1,6 @@
 //
-//  PrivateMethodSampleTests.h
-//  PrivateMethodSampleTests
+//  PerformSelectorTests.h
+//  PrivateMethodSample
 //
 //  Copyright (c) 2012年 dkfj. All rights reserved.
 //
@@ -8,7 +8,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "ExampleClass.h"
 
-@interface PrivateMethodSampleTests : SenTestCase {
+@interface PerformSelectorTests : SenTestCase {
     ExampleClass *exampleClass;
 }
 

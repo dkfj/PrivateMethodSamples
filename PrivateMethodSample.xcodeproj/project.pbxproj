@@ -21,6 +21,8 @@
 		3C2FBAFA15FC19ED00BB0E36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2FBAD815FC19EC00BB0E36 /* Foundation.framework */; };
 		3C2FBB0215FC19ED00BB0E36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FBB0015FC19ED00BB0E36 /* InfoPlist.strings */; };
 		3C2FBB0515FC19ED00BB0E36 /* PrivateMethodSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FBB0415FC19ED00BB0E36 /* PrivateMethodSampleTests.m */; };
+		3C2FBB1415FC1E5F00BB0E36 /* ExampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FBB1315FC1E5F00BB0E36 /* ExampleClass.m */; };
+		3C2FBB1715FC28A500BB0E36 /* PerformSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FBB1615FC28A500BB0E36 /* PerformSelectorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,11 @@
 		3C2FBB0115FC19ED00BB0E36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C2FBB0315FC19ED00BB0E36 /* PrivateMethodSampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateMethodSampleTests.h; sourceTree = "<group>"; };
 		3C2FBB0415FC19ED00BB0E36 /* PrivateMethodSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateMethodSampleTests.m; sourceTree = "<group>"; };
+		3C2FBB1215FC1E5F00BB0E36 /* ExampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleClass.h; sourceTree = "<group>"; };
+		3C2FBB1315FC1E5F00BB0E36 /* ExampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleClass.m; sourceTree = "<group>"; };
+		3C2FBB1515FC28A500BB0E36 /* PerformSelectorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSelectorTests.h; sourceTree = "<group>"; };
+		3C2FBB1615FC28A500BB0E36 /* PerformSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSelectorTests.m; sourceTree = "<group>"; };
+		3C2FBB1815FC6D5300BB0E36 /* ExampleClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleClassExtension.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +127,8 @@
 				3C2FBAEB15FC19EC00BB0E36 /* ViewController_iPhone.xib */,
 				3C2FBAEE15FC19EC00BB0E36 /* ViewController_iPad.xib */,
 				3C2FBADD15FC19EC00BB0E36 /* Supporting Files */,
+				3C2FBB1215FC1E5F00BB0E36 /* ExampleClass.h */,
+				3C2FBB1315FC1E5F00BB0E36 /* ExampleClass.m */,
 			);
 			path = PrivateMethodSample;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 		3C2FBAFD15FC19ED00BB0E36 /* PrivateMethodSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C2FBB1915FC6DDD00BB0E36 /* Extensions */,
 				3C2FBB0315FC19ED00BB0E36 /* PrivateMethodSampleTests.h */,
 				3C2FBB0415FC19ED00BB0E36 /* PrivateMethodSampleTests.m */,
 				3C2FBAFE15FC19ED00BB0E36 /* Supporting Files */,
+				3C2FBB1515FC28A500BB0E36 /* PerformSelectorTests.h */,
+				3C2FBB1615FC28A500BB0E36 /* PerformSelectorTests.m */,
 			);
 			path = PrivateMethodSampleTests;
 			sourceTree = "<group>";
@@ -152,6 +164,14 @@
 				3C2FBB0015FC19ED00BB0E36 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C2FBB1915FC6DDD00BB0E36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FBB1815FC6D5300BB0E36 /* ExampleClassExtension.h */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +285,7 @@
 				3C2FBAE315FC19EC00BB0E36 /* main.m in Sources */,
 				3C2FBAE715FC19EC00BB0E36 /* AppDelegate.m in Sources */,
 				3C2FBAEA15FC19EC00BB0E36 /* ViewController.m in Sources */,
+				3C2FBB1415FC1E5F00BB0E36 /* ExampleClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2FBB0515FC19ED00BB0E36 /* PrivateMethodSampleTests.m in Sources */,
+				3C2FBB1715FC28A500BB0E36 /* PerformSelectorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
